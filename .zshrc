@@ -104,7 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$HOME/.neovim/bin:$PATH"
-export PATH="$HOME/.llvm-project/build/bin:$PATH"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
