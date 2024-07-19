@@ -72,12 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	gh
-	golang
 	python
 	tmux
 	gitignore
-	node
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
@@ -114,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.neovim/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/go/bin/"
+export PATH="/home/xeron/.cache/rebar3/bin:$PATH"
 
 # Startup configurations
 eval "$(zoxide init zsh)"
@@ -124,3 +123,8 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
